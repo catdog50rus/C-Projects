@@ -1,0 +1,22 @@
+/* Программа для нахождения колчества корней уравнения  (ax3+bx2+cx+d)/(x−e)=0 на отрезке [0,1000].
+*/
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int c = Convert.ToInt32(Console.ReadLine());
+        int d = Convert.ToInt32(Console.ReadLine());
+        int e = Convert.ToInt32(Console.ReadLine());
+        int x, sum = 0;
+
+        for(x = 0; x <= 1000; x++){
+            if(((a * Math.Pow(x, 3) + b * Math.Pow(x, 2) + c * x + d) == 0)&&(x != e))
+                 sum++;
+        }
+        Console.WriteLine(sum);
+    }
+}
